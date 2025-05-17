@@ -1,0 +1,295 @@
+:root {
+    --bg-color: #eef2f7;
+    --text-color: #333;
+    --card-bg: #fff;
+    --accent: #242424;
+    --hover: #1b5fab;
+    --border-color: #ccc;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    transition: 0.3s all;
+
+}
+
+.kur-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    background-color: none;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.kur-link:hover {
+    background-color: var(--hover);
+}
+
+.top-balance {
+    font-weight: bold;
+    background-color: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-color);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 180px;
+    height: 100vh;
+    background-color: var(--card-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.sidebar a {
+    color: var(--text-color);
+    padding: 15px 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #f0f8ff;
+}
+
+.nav-title {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.bottom-buttons {
+    display: inline-block;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Başlıklar */
+h2, h3 {
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    padding-top: 12px;
+}
+.greeting {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form kutuları */
+form {
+    background: var(--card-bg);
+    padding: 20px; /* Increased padding for better spacing */
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 500px; /* Set a max-width for better form structure */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Giriş alanları */
+input, select {
+    width: 100%;
+    padding: 12px; /* Increased padding for input and select */
+    margin: 8px 0 15px; /* Adjusted margin for better spacing */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-sizing: border-box; /* Ensures padding is included in total width */
+}
+
+/* Butonlar */
+input[type="submit"],
+button {
+    background-color: var(--accent);
+    color: white;
+    padding: 12px 20px; /* Increased padding for better button size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Slightly bigger font for better readability */
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: var(--hover);
+}
+
+.currency-select {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    appearance: none; /* Tarayıcı stilini sıfırla */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20,50 70,100 120,50' stroke='%23333' stroke-width='20' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 14px;
+}
+
+.currency-select option {
+    padding: 10px;
+    font-size: 15px;
+}
+/* Tablolar */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Linkler */
+a {
+    text-decoration: none;
+    color: var(--accent);
+    display: inline-block;
+}
+
+.update-rates-btn {
+    text-align: center;
+    justify-content: center;
+    align-items: center; /* Butonun dikeyde de ortalanması için */
+    margin: 0 auto; /* Eğer bloğun genişliğini kısıtlamışsanız, tam ortalamak için */ 
+    display:flex;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 7px;
+    margin-top: 5px;
+}
+.update-rates-btn:hover{
+    background-color: rgb(173, 173, 173);
+}
+.balance-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Buton ile yazı arası boşluk */
+    font-size: 18px;
+    z-index: 999; /* Üstte kalması için */
+    background-color: var(--background-color); 
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.balance-container a {
+    color: var(--bg-color);
+    text-decoration: none;
+    background-color: #005A9C; 
+    border-radius: 6px;
+    font-size: 18px;
+    transition: 0.2s ease;
+    margin-left: 20px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.balance-btn:hover {
+    background-color: #1E90FF;
+}
+.account-buttons a {
+    color: var(--text-color);
+    margin: 0px 10px;
+}
+.wallet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.wallet-card {
+    width: 48%;
+    background-color: #111;
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wallet-card:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+.currency-label {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.wallet-details {
+    display: none;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 8px;
+}
+.save-card-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.save-card-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: #007bff; /* mavi checkbox rengi */
+    cursor: pointer;
+}
+
+.save-card-container label {
+    cursor: pointer;
+}
