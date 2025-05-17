@@ -37,8 +37,8 @@ This project is a web-based currency exchange automation system that enables use
 ## 📷 Sample UI
 Example dashboard and wallet interface:
 
->![Dashboard Screenshot](Dashboard.png)
->![Dashboard Screenshot](Dashboard2.png)
+>![Dashboard Screenshot](images/Dashboard.png)
+>![Dashboard Screenshot](images/Dashboard2.png)
 
 
 ## 👨‍💻 Authors
